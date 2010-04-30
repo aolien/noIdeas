@@ -1,0 +1,48 @@
+D:\VSProjects\MainProject\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+D:\VSProjects\MainProject\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+D:\VSProjects\MainProject\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+D:\VSProjects\MainProject\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\VSProjects\MainProject\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+D:\VSProjects\MainProject\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb
+D:\VSProjects\MainProject\NoIdeas.Client\bin\Debug\NoIdeas.Lib.dll
+D:\VSProjects\MainProject\NoIdeas.Client\bin\Debug\NoIdeas.Lib.pdb
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Lib.dll
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Lib.pdb
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+D:\VSProjects\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Lib.dll
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Lib.pdb
+C:\Users\Vista_User\Desktop\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.dll
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe.config
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.exe
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Client.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.exe
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Debug\NoIdeas.Client.pdb

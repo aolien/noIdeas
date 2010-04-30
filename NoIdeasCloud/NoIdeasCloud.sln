@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "NoIdeasCloud", "NoIdeasCloud\NoIdeasCloud.ccproj", "{58821195-5309-4481-BFB0-53CBAD8DDA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoIdeasWebRole", "NoIdeasWebRole\NoIdeasWebRole.csproj", "{9D37CF35-945F-4C61-B875-BCD207ACE892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoIdeasServer.Lib", "NoIdeasServer.Lib\NoIdeasServer.Lib.csproj", "{49FCB810-0247-4A14-9BCF-4412F4161D79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58821195-5309-4481-BFB0-53CBAD8DDA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58821195-5309-4481-BFB0-53CBAD8DDA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58821195-5309-4481-BFB0-53CBAD8DDA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58821195-5309-4481-BFB0-53CBAD8DDA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D37CF35-945F-4C61-B875-BCD207ACE892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D37CF35-945F-4C61-B875-BCD207ACE892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D37CF35-945F-4C61-B875-BCD207ACE892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D37CF35-945F-4C61-B875-BCD207ACE892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FCB810-0247-4A14-9BCF-4412F4161D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FCB810-0247-4A14-9BCF-4412F4161D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FCB810-0247-4A14-9BCF-4412F4161D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FCB810-0247-4A14-9BCF-4412F4161D79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

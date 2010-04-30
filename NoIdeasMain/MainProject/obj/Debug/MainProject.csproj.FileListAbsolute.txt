@@ -1,0 +1,21 @@
+H:\VSProjects\MainProject\MainProject\bin\Debug\MainProject.exe
+H:\VSProjects\MainProject\MainProject\bin\Debug\MainProject.pdb
+H:\VSProjects\MainProject\MainProject\obj\Debug\ResolveAssemblyReference.cache
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.HomeForm.resources
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.ProfileForm.resources
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.Properties.Resources.resources
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.csproj.GenerateResource.Cache
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.exe
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.pdb
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\bin\Debug\MainProject.exe
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\bin\Debug\MainProject.pdb
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.HomeForm.resources
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.ProfileForm.resources
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.Properties.Resources.resources
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.csproj.GenerateResource.Cache
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.exe
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.pdb
+C:\Documents and Settings\Jeremy\Desktop\cs638\MainProject\MainProject\obj\Debug\MainProject.DateForm.resources
+H:\VSProjects\MainProject\MainProject\bin\Debug\LiveLocationLib.dll
+H:\VSProjects\MainProject\MainProject\obj\Debug\MainProject.DateForm.resources

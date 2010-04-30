@@ -1,0 +1,12 @@
+D/schema///////
+/EtwListener.dll////*///
+/FileListener.dll////*///
+/MonAgent.dll////*///
+/MonAgentHost.exe////*///
+/MonEvents.dll////*///
+/MonNetTransport.dll////*///
+/MonQuery.dll////*///
+/MonTables.dll////*///
+/secutil.dll////*///
+/SysCounterListener.dll////*///
+/SystemEventsListener.dll////*///

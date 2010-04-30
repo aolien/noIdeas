@@ -1,0 +1,15 @@
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.dll
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.pdb
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.dll
+D:\VSProjects\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\Desktop\NoIdeas - GIT me\NoIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Debug\NoIdeas.Phone.Lib.pdb
