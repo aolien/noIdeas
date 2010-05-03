@@ -22,3 +22,11 @@ D:\VSProjects\NoIdeas\NoIdeasCloud\NoIdeasCloud\NoIdeasServer.Lib\obj\Debug\NoId
 D:\VSProjects\NoIdeas\NoIdeasCloud\NoIdeasCloud\NoIdeasServer.Lib\obj\Debug\NoIdeasServer.Lib.pdb
 D:\VSProjects\NoIdeas\NoIdeasCloud\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeas.Phone.Lib.dll
 D:\VSProjects\NoIdeas\NoIdeasCloud\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeasServer.Lib.dll.config
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeasServer.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeasServer.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\obj\Debug\NoIdeasServer.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\obj\Debug\NoIdeasServer.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasServer.Lib\bin\Debug\NoIdeas.Phone.Lib.pdb

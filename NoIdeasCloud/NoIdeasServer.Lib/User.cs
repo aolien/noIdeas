@@ -11,6 +11,7 @@ namespace NoIdeasServer.Lib
         private double distanceRange = -1;
         private double latitude = -1;
         private double longitude = -1;
+        private int phone = -1;
 
         #region Get/Set methods
         public string UserNickName
@@ -37,6 +38,12 @@ namespace NoIdeasServer.Lib
             get { return longitude; }
             set { longitude = value; }
         }
+        public int Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+        
         #endregion
 
         /// <summary>
@@ -46,12 +53,13 @@ namespace NoIdeasServer.Lib
         /// <param name="distance"></param>
         /// <param name="latitude"></param>
         /// <param name="longitude"></param>
-        public User(string nickName, double distance, double latitude, double longitude)
+        public User(string nickName, double distance, double latitude, double longitude,int phone)
         {
             UserNickName = nickName;
             DistanceRange = distance;
             Latitude = latitude;
             Longitude = longitude;
+            Phone = phone;
         }
         /// <summary>
         /// Override method to compare Users by the nickName

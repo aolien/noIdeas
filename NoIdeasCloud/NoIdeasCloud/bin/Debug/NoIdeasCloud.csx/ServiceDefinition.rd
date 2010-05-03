@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NoIdeasCloud" generation="1" functional="0" release="0" Id="08c46b8c-d9cd-47c4-8d94-c7105424acdd" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NoIdeasCloud" generation="1" functional="0" release="0" Id="2cf06529-1bc5-4168-b779-4142882699e4" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="NoIdeasCloudGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -66,9 +66,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="17151852-f575-41bc-ac0b-ffe18cfc0774" ref="Microsoft.RedDog.Contract\ServiceContract\NoIdeasCloudContract@ServiceDefinition">
+    <implementation Id="6df9b4c5-6a9b-455e-bf0e-31cfa6fa4342" ref="Microsoft.RedDog.Contract\ServiceContract\NoIdeasCloudContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="b5dab1bb-bf62-45ca-a687-a242d5c2157f" ref="Microsoft.RedDog.Contract\Interface\NoIdeasWebRole:HttpIn@ServiceDefinition">
+        <interfaceReference Id="26cd3695-5b53-4df8-9a5d-fcd92b840d98" ref="Microsoft.RedDog.Contract\Interface\NoIdeasWebRole:HttpIn@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/NoIdeasCloud/NoIdeasCloudGroup/NoIdeasWebRole:HttpIn" />
           </inPort>

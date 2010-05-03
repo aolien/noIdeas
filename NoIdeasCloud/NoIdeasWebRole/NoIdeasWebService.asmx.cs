@@ -2,6 +2,7 @@
 using System.Web.Services;
 using NoIdeas.Phone.Lib;
 using NoIdeasServer.Lib;
+using System.Collections.Generic;
 
 
 namespace NoIdeasWebRole
@@ -59,12 +60,21 @@ namespace NoIdeasWebRole
         /// <param name="longitude">GPS longitude</param>
         /// <param name="latitude">GPS latitude</param>
         /// <returns>DataTable with all matches</returns>
+        //[WebMethod]
+        //public DataTable FindMatches(double longitude, double latitude)
+        //{
+        //    WorkerClass worker = new WorkerClass();
+        //    return worker.FindMatches(longitude, latitude);
+        //}
+
         [WebMethod]
-        public DataTable FindMatches(double longitude, double latitude)
+        public List<MatchedResults> FindMatches(string username, double longitude, double latitude)
         {
             WorkerClass worker = new WorkerClass();
-            return worker.FindMatches(longitude, latitude);
+            return worker.FindMatches(username,longitude, latitude);
         }
+
+
         /// <summary>
         /// Deletes the user with given Profile from the activeUser list 
         /// and updates the DataBase(isOnline off)

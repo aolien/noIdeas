@@ -75,11 +75,69 @@ namespace NoIdeasServer.Lib
         /// <param name="longitude"></param>
         /// <param name="latitude"></param>
         /// <returns></returns>
-        public DataTable FindMatches(double longitude, double latitude)
+        //public DataTable FindMatches(double longitude, double latitude)
+        //{
+        //    DataTable dt = new DataTable();
+        //    return dt;
+        //}
+
+        public List<MatchedResults> FindMatches(string requestedUserName, double longitude, double latitude)
         {
-            DataTable dt = new DataTable();
-            return dt;
+            //setup the list we return
+            List<MatchedResults> matchingList = new List<MatchedResults>();
+
+            //find teh matching User for passed username
+            double reqLat = -1;
+            double reqLong = -1;
+            double reqRange = -1;
+            int reqPhone = -1;
+            //terrible way to do this......
+            foreach (User tmpUser in activeUsers)
+            {
+                if (tmpUser.UserNickName == requestedUserName)
+                {
+                    reqLat = tmpUser.Latitude;
+                    reqLong = tmpUser.Longitude;
+                    reqRange = tmpUser.DistanceRange;
+                    reqPhone = tmpUser.Phone;
+                    break;
+                }
+            }
+
+            User requestedUser = new User(requestedUserName, reqRange, reqLat, reqLong,reqPhone);
+            
+            //init the matchmaker class
+            MatchMaker matchMaker = new MatchMaker();
+
+            //loop through the active users and see which ones are within distance
+            foreach (User tmpUser in activeUsers)
+            {
+                //this should give us the actual distance between the 2 users
+                //may need to multiple lates by 69.1 and longs by 53 to convert to miles
+                //
+                if (Math.Sqrt(69.1*Math.Pow((tmpUser.Latitude - requestedUser.Latitude),2) + 53*Math.Pow((tmpUser.Longitude - requestedUser.Longitude),2)) < requestedUser.DistanceRange)
+                {
+                    //run the match comparision
+                    double matchPercentage = matchMaker.matchPercentage(tmpUser.UserNickName, requestedUser.UserNickName);
+
+                    //create the matchedResults object
+                    MatchedResults curMatch = new MatchedResults();
+                    curMatch.MatchPercentage = matchPercentage;
+                    curMatch.Name = tmpUser.UserNickName;
+                    curMatch.Phone = tmpUser.Phone;
+                    
+
+                    //add that new object to the list (preferably in sorted order)
+                    matchingList.Add(curMatch);
+                }
+
+            }
+
+            //return a list of matches
+            return matchingList;
         }
+        
+
         /// <summary>
         /// Deletes the user form the activeUser set and change the online status in DataBase
         /// </summary>
@@ -233,8 +291,9 @@ namespace NoIdeasServer.Lib
             double distanceRange = profile.Distance;
             double latitude = profile.Latitude;
             double longitude = profile.Longitude;
+            int phone = profile.Phone;
             // Create new User
-            User user = new User(nickName, distanceRange, latitude, longitude);
+            User user = new User(nickName, distanceRange, latitude, longitude, phone);
             return user;
         }
 

@@ -171,9 +171,7 @@ C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.c
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\Microsoft.WindowsAzure.StorageClient.dll
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\Microsoft.WindowsAzure.StorageClient.xml
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeas.Phone.Lib.dll
-C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeas.Phone.Lib.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeasServer.Lib.dll
-C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeasServer.Lib.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeasWebRole.dll
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeasWebRole.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\RuntimeSetup.Manifest
@@ -214,11 +212,13 @@ C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\Microsoft.WindowsAzure.StorageClient.dll
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\Microsoft.WindowsAzure.StorageClient.xml
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeas.Phone.Lib.dll
-C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeas.Phone.Lib.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeasServer.Lib.dll
-C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeasServer.Lib.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeasWebRole.dll
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeasWebRole.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\Default.aspx
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\NoIdeasWebService.asmx
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\Web.config
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\bin\Debug\NoIdeasCloud.csx\roles\NoIdeasWebRole\approot\bin\NoIdeasServer.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasCloud\NoIdeasCloud\obj\Debug\NoIdeasWebRole\bin\NoIdeasServer.Lib.pdb

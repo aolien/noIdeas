@@ -68,6 +68,5 @@ C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\bin\Debug\MainProject.exe
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\bin\Debug\MainProject.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\bin\Debug\NoIdeas.Phone.Lib.dll
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\bin\Debug\NoIdeas.Phone.Lib.pdb
-C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\bin\Debug\LiveLocationWrapper.pdb
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\obj\Debug\MainProject.exe
 C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\MainProject\obj\Debug\MainProject.pdb

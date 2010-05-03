@@ -39,9 +39,9 @@
     <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="NoIdeas.Phone.Lib, Version=1.0.3771.36055, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NoIdeas.Phone.Lib, Version=1.0.3775.18006, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.dll</HintPath>
+      <HintPath>..\..\NoIdeasMain\NoIdeas.Phone.Lib\bin\Debug\NoIdeas.Phone.Lib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
