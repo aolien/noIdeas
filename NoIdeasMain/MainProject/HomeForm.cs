@@ -6,6 +6,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.LiveLocationWrapper;
+using System.Threading;
 
 namespace NoIdeas.Phone
 {
@@ -15,117 +17,141 @@ namespace NoIdeas.Phone
     /// </summary>
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        /// <summary>
+        /// An instance of the location wrapper class.
+        /// </summary>
+        private LocationWrapper locationWrapper;
+
+        public HomeForm(string username)
         {
             InitializeComponent();
+            this.Text = username;
 
-            //datingAdLink.BackColor = Color.Transparent;
+            // Firts we need to get GPS coordinates 
             
-            //chattingpicpanel.BackColor = ((System.Drawing.Image)(resources.GetObject("chattingpic.Image")));
+            // Prepare the location API.
+            this.locationWrapper = LocationWrapper.GetInstance();
+            this.locationWrapper.ApplicationGuid = Program.ApplicationId;
 
-            //datingAdLink.Parent = panel1;
-            
+            // Allow 5 seconds to generate each location fix.
+            this.locationWrapper.AllowedTime = TimeSpan.FromSeconds(5);
 
-            //datingAdLink.Location = New Point(0, 0);
+            // Location fixes will be at least 1 second apart.
+            this.locationWrapper.Interval = TimeSpan.FromSeconds(1);
 
-            
-            //dinnerAdLink.Parent = chattingpic;
+            this.locationWrapper.LocationUpdated += new LocationUpdatedEventHandler(this.OnLocationUpdated);
+            // Start it 
+            this.locationWrapper.StartUpdating();
+
+
+            ThreadStart start = new ThreadStart(this.UpdateGPSCoordinates);
+            Thread gpsThread = new Thread(start);
+            gpsThread.Start();
+
+            Cursor.Current = Cursors.Default;
+
         }
+
+
+        private void UpdateGPSCoordinates()
+        {
+           
+            // This is our webService reference 
+            MainProject.cloudWebRef.NoIdeasWebService service = new MainProject.cloudWebRef.NoIdeasWebService();
+            
+            while (true)
+            {
+            //txbTestThread.Text = "It's been " + count.ToString() + " so far";
+                service.UpdateDatingProfile(Program.dprofile);
+                Thread.Sleep(30000);
+                Program.dprofile.Max_Weight++;
+            }
+        }
+
         /// <summary>
-        /// Handler for the Edit profile link
+        /// 
         /// </summary>
-        /// <param name="sender">Unused</param>
-        /// <param name="e">Unused</param>
-        private void linkProfile_Click(object sender, EventArgs e)
-        {
-            // Creating the new instance of the ProfileForm
-            ProfileForm profileForm = new ProfileForm();
-            // Displaying the profile form
-            profileForm.Show();
-        }
-
-        private void label1_ParentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HomeForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void datingAdLink_Click(object sender, EventArgs e)
-        {
-            //open up the dating advertisment properties page
-            DateForm dateForm = new DateForm();
-            dateForm.Show();
-        }
-
-        private void studyAdLink_Click(object sender, EventArgs e)
-        {
-            //open up the study advertisment properties page
-        }
-
-        private void dinnerAdLink_Click(object sender, EventArgs e)
-        {
-            //open up the dinner advertisment properties page
-        }
-
-        private void datingAdCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            //this should activate/deactivate dating ad
-            
-        }
-
-        private void studyAdCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            //this should activate/deactivate study ad
-        }
-
-        private void dinnerAdCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            //this should activate/deactivate dinner ad
-        }
-
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void editprofilebutton_Click(object sender, EventArgs e)
         {
+            
             // Creating the new instance of the ProfileForm
             ProfileForm profileForm = new ProfileForm();
             // Displaying the profile form
             profileForm.Show();
         }
 
-        private void finddatebutton_Click(object sender, EventArgs e)
+       
+       
+        /// <summary>
+        /// This is where users request to see there matches
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnGetMatches_Click(object sender, EventArgs e)
         {
-            DateForm dateForm = new DateForm();
-            dateForm.Show();
+
+           
+            // Call the WebService method here 
+            
+            //send user to the results form
+            Results resultsForm = new Results(Program.nickName);
+            resultsForm.Show();
+
         }
 
-        private void signinbutton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Delegate for asynchronous location updates posted to the UI thread.
+        /// </summary>
+        /// <param name="geoLocation">The updated location</param>
+        private delegate void UpdateLocationDelegate(GeoLocation geoLocation);
+
+        /// <summary>
+        /// Event handler for location update events.
+        /// </summary>
+        /// <param name="sender">Object sending this event</param>
+        /// <param name="args">Event arguments</param>
+        private void OnLocationUpdated(object sender, LocationEventArgs args)
         {
-            bool readyToSignIn = true;
+            this.Invoke(
+                new UpdateLocationDelegate(this.UpdateLocation),
+                new object[] { args.GeoLocation });
+        }
 
-            // Checking if the user enter user name/password
-            if((usernametextbox.TextLength != 0) & (passwordtextbox.TextLength != 0))
-            {
-                
-            }
-            else
-            {
+        /// <summary>
+        /// Set Latitude and Longitude to the User Profile
+        /// </summary>
+        /// <param name="geoLocation">The updated location</param>
+        private void UpdateLocation(GeoLocation geoLocation)
+        {
+            Program.profile.Latitude = geoLocation.Latitude;
+            Program.profile.Longitude = geoLocation.Longitude;
 
-                readyToSignIn = false;
-            }
+        }
 
-            // We good to go 
-            if (readyToSignIn)
-            {
-                signinbutton.Visible = false;
-                editprofilebutton.Visible = true;
-                finddatebutton.Visible = true;                
-            }
-            // Display the error message
-            else
-                MessageBox.Show("Please enter valid User Name/Password");
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void createAdbutton_Click(object sender, EventArgs e)
+        {
+           
+            DateForm dateForm = new DateForm(Program.nickName);
+            dateForm.Show();
+        }
+        /// <summary>
+        /// Exit the App - deletes the Dating Profile from the DataBase, flips the online bit in userInfo table 
+        /// in DataBase and deleted the user from the active user HashSet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btExitApp_Click(object sender, EventArgs e)
+        {
+
         }
 
               

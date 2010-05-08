@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoIdeas.Client", "NoIdeas.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoIdeas.Phone.Lib", "NoIdeas.Phone.Lib\NoIdeas.Phone.Lib.csproj", "{2C773BED-E87A-4B33-BF10-95B2680E767E}"
 EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "NoIdeasDating", "NoIdeasDating\NoIdeasDating.vddproj", "{650A80B0-2DB3-4C7C-9C5F-5102B59BC0EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{2C773BED-E87A-4B33-BF10-95B2680E767E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C773BED-E87A-4B33-BF10-95B2680E767E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C773BED-E87A-4B33-BF10-95B2680E767E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650A80B0-2DB3-4C7C-9C5F-5102B59BC0EA}.Debug|Any CPU.ActiveCfg = Debug
+		{650A80B0-2DB3-4C7C-9C5F-5102B59BC0EA}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

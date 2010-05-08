@@ -20,9 +20,8 @@ namespace NoIdeas.Client.cloudWebRef {
     using System.Web.Services.Protocols;
     using System;
     using System.Xml.Serialization;
-    using System.Data;
     using NoIdeas.Phone.Lib;
-    
+    using System.Collections.Generic;
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
@@ -33,7 +32,19 @@ namespace NoIdeas.Client.cloudWebRef {
         
         private System.Threading.SendOrPostCallback UpdateProfileOperationCompleted;
         
-        private System.Threading.SendOrPostCallback FindMatchesOperationCompleted;
+        private System.Threading.SendOrPostCallback UpdateDatingProfileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertNewUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetUserProfileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback LoginCheckOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback LoadDatingProfileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeletedatingProfileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RunAndFindMatchesOperationCompleted;
         
         private System.Threading.SendOrPostCallback EndSessionOperationCompleted;
         
@@ -81,7 +92,25 @@ namespace NoIdeas.Client.cloudWebRef {
         public event UpdateProfileCompletedEventHandler UpdateProfileCompleted;
         
         /// <remarks/>
-        public event FindMatchesCompletedEventHandler FindMatchesCompleted;
+        public event UpdateDatingProfileCompletedEventHandler UpdateDatingProfileCompleted;
+        
+        /// <remarks/>
+        public event InsertNewUserCompletedEventHandler InsertNewUserCompleted;
+        
+        /// <remarks/>
+        public event GetUserProfileCompletedEventHandler GetUserProfileCompleted;
+        
+        /// <remarks/>
+        public event LoginCheckCompletedEventHandler LoginCheckCompleted;
+        
+        /// <remarks/>
+        public event LoadDatingProfileCompletedEventHandler LoadDatingProfileCompleted;
+        
+        /// <remarks/>
+        public event DeletedatingProfileCompletedEventHandler DeletedatingProfileCompleted;
+        
+        /// <remarks/>
+        public event RunAndFindMatchesCompletedEventHandler RunAndFindMatchesCompleted;
         
         /// <remarks/>
         public event EndSessionCompletedEventHandler EndSessionCompleted;
@@ -119,33 +148,209 @@ namespace NoIdeas.Client.cloudWebRef {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FindMatches", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable FindMatches(double longitude, double latitude) {
-            object[] results = this.Invoke("FindMatches", new object[] {
-                        longitude,
-                        latitude});
-            return ((System.Data.DataTable)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateDatingProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool UpdateDatingProfile(DatingProfile dprofile) {
+            object[] results = this.Invoke("UpdateDatingProfile", new object[] {
+                        dprofile});
+            return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void FindMatchesAsync(double longitude, double latitude) {
-            this.FindMatchesAsync(longitude, latitude, null);
+        public void UpdateDatingProfileAsync(DatingProfile dprofile) {
+            this.UpdateDatingProfileAsync(dprofile, null);
         }
         
         /// <remarks/>
-        public void FindMatchesAsync(double longitude, double latitude, object userState) {
-            if ((this.FindMatchesOperationCompleted == null)) {
-                this.FindMatchesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFindMatchesOperationCompleted);
+        public void UpdateDatingProfileAsync(DatingProfile dprofile, object userState) {
+            if ((this.UpdateDatingProfileOperationCompleted == null)) {
+                this.UpdateDatingProfileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateDatingProfileOperationCompleted);
             }
-            this.InvokeAsync("FindMatches", new object[] {
-                        longitude,
-                        latitude}, this.FindMatchesOperationCompleted, userState);
+            this.InvokeAsync("UpdateDatingProfile", new object[] {
+                        dprofile}, this.UpdateDatingProfileOperationCompleted, userState);
         }
         
-        private void OnFindMatchesOperationCompleted(object arg) {
-            if ((this.FindMatchesCompleted != null)) {
+        private void OnUpdateDatingProfileOperationCompleted(object arg) {
+            if ((this.UpdateDatingProfileCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FindMatchesCompleted(this, new FindMatchesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.UpdateDatingProfileCompleted(this, new UpdateDatingProfileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertNewUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool InsertNewUser(Profile profile) {
+            object[] results = this.Invoke("InsertNewUser", new object[] {
+                        profile});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertNewUserAsync(Profile profile) {
+            this.InsertNewUserAsync(profile, null);
+        }
+        
+        /// <remarks/>
+        public void InsertNewUserAsync(Profile profile, object userState) {
+            if ((this.InsertNewUserOperationCompleted == null)) {
+                this.InsertNewUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertNewUserOperationCompleted);
+            }
+            this.InvokeAsync("InsertNewUser", new object[] {
+                        profile}, this.InsertNewUserOperationCompleted, userState);
+        }
+        
+        private void OnInsertNewUserOperationCompleted(object arg) {
+            if ((this.InsertNewUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertNewUserCompleted(this, new InsertNewUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetUserProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Profile GetUserProfile(string nickName) {
+            object[] results = this.Invoke("GetUserProfile", new object[] {
+                        nickName});
+            return ((Profile)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetUserProfileAsync(string nickName) {
+            this.GetUserProfileAsync(nickName, null);
+        }
+        
+        /// <remarks/>
+        public void GetUserProfileAsync(string nickName, object userState) {
+            if ((this.GetUserProfileOperationCompleted == null)) {
+                this.GetUserProfileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUserProfileOperationCompleted);
+            }
+            this.InvokeAsync("GetUserProfile", new object[] {
+                        nickName}, this.GetUserProfileOperationCompleted, userState);
+        }
+        
+        private void OnGetUserProfileOperationCompleted(object arg) {
+            if ((this.GetUserProfileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetUserProfileCompleted(this, new GetUserProfileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/LoginCheck", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool LoginCheck(string nickName, string password) {
+            object[] results = this.Invoke("LoginCheck", new object[] {
+                        nickName,
+                        password});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void LoginCheckAsync(string nickName, string password) {
+            this.LoginCheckAsync(nickName, password, null);
+        }
+        
+        /// <remarks/>
+        public void LoginCheckAsync(string nickName, string password, object userState) {
+            if ((this.LoginCheckOperationCompleted == null)) {
+                this.LoginCheckOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginCheckOperationCompleted);
+            }
+            this.InvokeAsync("LoginCheck", new object[] {
+                        nickName,
+                        password}, this.LoginCheckOperationCompleted, userState);
+        }
+        
+        private void OnLoginCheckOperationCompleted(object arg) {
+            if ((this.LoginCheckCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoginCheckCompleted(this, new LoginCheckCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/LoadDatingProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool LoadDatingProfile(DatingProfile dprofile) {
+            object[] results = this.Invoke("LoadDatingProfile", new object[] {
+                        dprofile});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void LoadDatingProfileAsync(DatingProfile dprofile) {
+            this.LoadDatingProfileAsync(dprofile, null);
+        }
+        
+        /// <remarks/>
+        public void LoadDatingProfileAsync(DatingProfile dprofile, object userState) {
+            if ((this.LoadDatingProfileOperationCompleted == null)) {
+                this.LoadDatingProfileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoadDatingProfileOperationCompleted);
+            }
+            this.InvokeAsync("LoadDatingProfile", new object[] {
+                        dprofile}, this.LoadDatingProfileOperationCompleted, userState);
+        }
+        
+        private void OnLoadDatingProfileOperationCompleted(object arg) {
+            if ((this.LoadDatingProfileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoadDatingProfileCompleted(this, new LoadDatingProfileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DeletedatingProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool DeletedatingProfile(DatingProfile dprofile) {
+            object[] results = this.Invoke("DeletedatingProfile", new object[] {
+                        dprofile});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeletedatingProfileAsync(DatingProfile dprofile) {
+            this.DeletedatingProfileAsync(dprofile, null);
+        }
+        
+        /// <remarks/>
+        public void DeletedatingProfileAsync(DatingProfile dprofile, object userState) {
+            if ((this.DeletedatingProfileOperationCompleted == null)) {
+                this.DeletedatingProfileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeletedatingProfileOperationCompleted);
+            }
+            this.InvokeAsync("DeletedatingProfile", new object[] {
+                        dprofile}, this.DeletedatingProfileOperationCompleted, userState);
+        }
+        
+        private void OnDeletedatingProfileOperationCompleted(object arg) {
+            if ((this.DeletedatingProfileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeletedatingProfileCompleted(this, new DeletedatingProfileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RunAndFindMatches", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public List<MatchedResults> RunAndFindMatches(Profile profile, DatingProfile dprofile) {
+            object[] results = this.Invoke("RunAndFindMatches", new object[] {
+                        profile,
+                        dprofile});
+            return ((List<MatchedResults>)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RunAndFindMatchesAsync(Profile profile, DatingProfile dprofile) {
+            this.RunAndFindMatchesAsync(profile, dprofile, null);
+        }
+        
+        /// <remarks/>
+        public void RunAndFindMatchesAsync(Profile profile, DatingProfile dprofile, object userState) {
+            if ((this.RunAndFindMatchesOperationCompleted == null)) {
+                this.RunAndFindMatchesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRunAndFindMatchesOperationCompleted);
+            }
+            this.InvokeAsync("RunAndFindMatches", new object[] {
+                        profile,
+                        dprofile}, this.RunAndFindMatchesOperationCompleted, userState);
+        }
+        
+        private void OnRunAndFindMatchesOperationCompleted(object arg) {
+            if ((this.RunAndFindMatchesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RunAndFindMatchesCompleted(this, new RunAndFindMatchesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -224,7 +429,7 @@ namespace NoIdeas.Client.cloudWebRef {
         }
     }
     
-    /// <remarks/>
+    ///// <remarks/>
     //[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "2.0.50727.4927")]
     //[System.SerializableAttribute()]
     //[System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -232,39 +437,167 @@ namespace NoIdeas.Client.cloudWebRef {
     //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     //public partial class Profile {
         
+    //    private string nickNameField;
+        
+    //    private string passwordField;
+        
+    //    private string firstNameField;
+        
+    //    private string lastNameField;
+        
+    //    private string sexField;
+        
+    //    private string hairField;
+        
+    //    private string raceField;
+        
+    //    private string interestField;
+        
+    //    private int ageField;
+        
+    //    private int onlineField;
+        
+    //    private int heightField;
+        
+    //    private int weightField;
+        
+    //    private int phoneField;
+        
     //    private double longitudeField;
         
     //    private double latitudeField;
         
     //    private double distanceField;
         
-    //    private int interest3Field;
+    //    /// <remarks/>
+    //    public string NickName {
+    //        get {
+    //            return this.nickNameField;
+    //        }
+    //        set {
+    //            this.nickNameField = value;
+    //        }
+    //    }
         
-    //    private int interest2Field;
+    //    /// <remarks/>
+    //    public string Password {
+    //        get {
+    //            return this.passwordField;
+    //        }
+    //        set {
+    //            this.passwordField = value;
+    //        }
+    //    }
         
-    //    private int interest1Field;
+    //    /// <remarks/>
+    //    public string FirstName {
+    //        get {
+    //            return this.firstNameField;
+    //        }
+    //        set {
+    //            this.firstNameField = value;
+    //        }
+    //    }
         
-    //    private int hairField;
+    //    /// <remarks/>
+    //    public string LastName {
+    //        get {
+    //            return this.lastNameField;
+    //        }
+    //        set {
+    //            this.lastNameField = value;
+    //        }
+    //    }
         
-    //    private int weightField;
+    //    /// <remarks/>
+    //    public string Sex {
+    //        get {
+    //            return this.sexField;
+    //        }
+    //        set {
+    //            this.sexField = value;
+    //        }
+    //    }
         
-    //    private int height_inField;
+    //    /// <remarks/>
+    //    public string Hair {
+    //        get {
+    //            return this.hairField;
+    //        }
+    //        set {
+    //            this.hairField = value;
+    //        }
+    //    }
         
-    //    private int height_ftField;
+    //    /// <remarks/>
+    //    public string Race {
+    //        get {
+    //            return this.raceField;
+    //        }
+    //        set {
+    //            this.raceField = value;
+    //        }
+    //    }
         
-    //    private int raceField;
+    //    /// <remarks/>
+    //    public string Interest {
+    //        get {
+    //            return this.interestField;
+    //        }
+    //        set {
+    //            this.interestField = value;
+    //        }
+    //    }
         
-    //    private int onlineField;
+    //    /// <remarks/>
+    //    public int Age {
+    //        get {
+    //            return this.ageField;
+    //        }
+    //        set {
+    //            this.ageField = value;
+    //        }
+    //    }
         
-    //    private string nameField;
+    //    /// <remarks/>
+    //    public int Online {
+    //        get {
+    //            return this.onlineField;
+    //        }
+    //        set {
+    //            this.onlineField = value;
+    //        }
+    //    }
         
-    //    private string lastNameField;
+    //    /// <remarks/>
+    //    public int Height {
+    //        get {
+    //            return this.heightField;
+    //        }
+    //        set {
+    //            this.heightField = value;
+    //        }
+    //    }
         
-    //    private int ageField;
+    //    /// <remarks/>
+    //    public int Weight {
+    //        get {
+    //            return this.weightField;
+    //        }
+    //        set {
+    //            this.weightField = value;
+    //        }
+    //    }
         
-    //    private string nickNameField;
-        
-    //    private string sexField;
+    //    /// <remarks/>
+    //    public int Phone {
+    //        get {
+    //            return this.phoneField;
+    //        }
+    //        set {
+    //            this.phoneField = value;
+    //        }
+    //    }
         
     //    /// <remarks/>
     //    public double Longitude {
@@ -295,94 +628,29 @@ namespace NoIdeas.Client.cloudWebRef {
     //            this.distanceField = value;
     //        }
     //    }
+    //}
+    
+    /// <remarks/>
+    //[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "2.0.50727.4927")]
+    //[System.SerializableAttribute()]
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.ComponentModel.DesignerCategoryAttribute("code")]
+    //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    //public partial class MatchedResults {
+        
+    //    private int phoneField;
+        
+    //    private string nameField;
+        
+    //    private double matchPercentageField;
         
     //    /// <remarks/>
-    //    public int Interest3 {
+    //    public int Phone {
     //        get {
-    //            return this.interest3Field;
+    //            return this.phoneField;
     //        }
     //        set {
-    //            this.interest3Field = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Interest2 {
-    //        get {
-    //            return this.interest2Field;
-    //        }
-    //        set {
-    //            this.interest2Field = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Interest1 {
-    //        get {
-    //            return this.interest1Field;
-    //        }
-    //        set {
-    //            this.interest1Field = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Hair {
-    //        get {
-    //            return this.hairField;
-    //        }
-    //        set {
-    //            this.hairField = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Weight {
-    //        get {
-    //            return this.weightField;
-    //        }
-    //        set {
-    //            this.weightField = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Height_in {
-    //        get {
-    //            return this.height_inField;
-    //        }
-    //        set {
-    //            this.height_inField = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Height_ft {
-    //        get {
-    //            return this.height_ftField;
-    //        }
-    //        set {
-    //            this.height_ftField = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Race {
-    //        get {
-    //            return this.raceField;
-    //        }
-    //        set {
-    //            this.raceField = value;
-    //        }
-    //    }
-        
-    //    /// <remarks/>
-    //    public int Online {
-    //        get {
-    //            return this.onlineField;
-    //        }
-    //        set {
-    //            this.onlineField = value;
+    //            this.phoneField = value;
     //        }
     //    }
         
@@ -397,22 +665,105 @@ namespace NoIdeas.Client.cloudWebRef {
     //    }
         
     //    /// <remarks/>
-    //    public string LastName {
+    //    public double MatchPercentage {
     //        get {
-    //            return this.lastNameField;
+    //            return this.matchPercentageField;
     //        }
     //        set {
-    //            this.lastNameField = value;
+    //            this.matchPercentageField = value;
+    //        }
+    //    }
+    //}
+    
+    /// <remarks/>
+    //[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "2.0.50727.4927")]
+    //[System.SerializableAttribute()]
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.ComponentModel.DesignerCategoryAttribute("code")]
+    //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    //public partial class DatingProfile {
+        
+    //    private string hairField;
+        
+    //    private int max_WeightField;
+        
+    //    private int min_WeightField;
+        
+    //    private string raceField;
+        
+    //    private int min_AgeField;
+        
+    //    private int max_AgeField;
+        
+    //    private string nickNameField;
+        
+    //    private string sexField;
+        
+    //    private int height_MaxField;
+        
+    //    private int height_MinField;
+        
+    //    private string interestField;
+        
+    //    private int rangeField;
+        
+    //    /// <remarks/>
+    //    public string Hair {
+    //        get {
+    //            return this.hairField;
+    //        }
+    //        set {
+    //            this.hairField = value;
     //        }
     //    }
         
     //    /// <remarks/>
-    //    public int Age {
+    //    public int Max_Weight {
     //        get {
-    //            return this.ageField;
+    //            return this.max_WeightField;
     //        }
     //        set {
-    //            this.ageField = value;
+    //            this.max_WeightField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Min_Weight {
+    //        get {
+    //            return this.min_WeightField;
+    //        }
+    //        set {
+    //            this.min_WeightField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public string Race {
+    //        get {
+    //            return this.raceField;
+    //        }
+    //        set {
+    //            this.raceField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Min_Age {
+    //        get {
+    //            return this.min_AgeField;
+    //        }
+    //        set {
+    //            this.min_AgeField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Max_Age {
+    //        get {
+    //            return this.max_AgeField;
+    //        }
+    //        set {
+    //            this.max_AgeField = value;
     //        }
     //    }
         
@@ -433,6 +784,46 @@ namespace NoIdeas.Client.cloudWebRef {
     //        }
     //        set {
     //            this.sexField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Height_Max {
+    //        get {
+    //            return this.height_MaxField;
+    //        }
+    //        set {
+    //            this.height_MaxField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Height_Min {
+    //        get {
+    //            return this.height_MinField;
+    //        }
+    //        set {
+    //            this.height_MinField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public string Interest {
+    //        get {
+    //            return this.interestField;
+    //        }
+    //        set {
+    //            this.interestField = value;
+    //        }
+    //    }
+        
+    //    /// <remarks/>
+    //    public int Range {
+    //        get {
+    //            return this.rangeField;
+    //        }
+    //        set {
+    //            this.rangeField = value;
     //        }
     //    }
     //}
@@ -465,26 +856,182 @@ namespace NoIdeas.Client.cloudWebRef {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
-    public delegate void FindMatchesCompletedEventHandler(object sender, FindMatchesCompletedEventArgs e);
+    public delegate void UpdateDatingProfileCompletedEventHandler(object sender, UpdateDatingProfileCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class FindMatchesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class UpdateDatingProfileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal FindMatchesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal UpdateDatingProfileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public System.Data.DataTable Result {
+        public bool Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void InsertNewUserCompletedEventHandler(object sender, InsertNewUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertNewUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertNewUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void GetUserProfileCompletedEventHandler(object sender, GetUserProfileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetUserProfileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetUserProfileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Profile Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Profile)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void LoginCheckCompletedEventHandler(object sender, LoginCheckCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LoginCheckCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LoginCheckCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void LoadDatingProfileCompletedEventHandler(object sender, LoadDatingProfileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LoadDatingProfileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LoadDatingProfileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void DeletedatingProfileCompletedEventHandler(object sender, DeletedatingProfileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeletedatingProfileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeletedatingProfileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void RunAndFindMatchesCompletedEventHandler(object sender, RunAndFindMatchesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RunAndFindMatchesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RunAndFindMatchesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public MatchedResults[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((MatchedResults[])(this.results[0]));
             }
         }
     }

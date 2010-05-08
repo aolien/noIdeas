@@ -1,5 +1,7 @@
 ﻿using System;
 using NoIdeas.Phone.Lib;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace NoIdeas.Client
 {
@@ -13,7 +15,7 @@ namespace NoIdeas.Client
             //After apdating the web service we need to commented out the declaration of webService Profile object
             // In order to do so -- uncomment next line , right click , go to defenition in comment the whole declaration 
             // of Profile and then declare the lib : using NoIdeas.Lib;
-           // NoIdeas.Client.cloudWebRef.Profile
+          // NoIdeas.Client.cloudWebRef.Profile
             
             
             // This is our webService reference 
@@ -21,32 +23,31 @@ namespace NoIdeas.Client
             cloudWebRef.NoIdeasWebService service = new cloudWebRef.NoIdeasWebService();
             // Creating the Profile the same way we will create it on the phone from profile page
             Profile profile = new Profile();
-            profile.NickName = "nickname2";
-            profile.Name = "firstName1";
-            profile.LastName = "lastname1";
-            profile.Sex = "m";
-            profile.Age = 1;
-            profile.Online = 1;
-            profile.Race = 1;
-            profile.Height_ft = 1;
-            profile.Height_in = 1;
-            profile.Weight = 100;
-            profile.Hair = 1;
-            profile.Interest1 = 1;
-            profile.Interest2 = 1;
-            profile.Interest3 = 1;
-            // Here we need to add the distance, latitude and longitude
-            profile.Distance = 100;
-            profile.Latitude = 1;
-            profile.Longitude = 1;
-            profile.Password = "pass";
-            profile.Phone = 123456;
 
-
-            DatingProfile date = new DatingProfile();
-            date.Sex = "m";
-            date.Race = 1;
+            profile.NickName = "Second one";
+            profile.Distance = 90;
+         //  NoIdeas.Client.cloudWebRef.MatchedResults[]
+            // NoIdeas.Client.cloudWebRef.DatingProfile
+         
+            List<MatchedResults> test = service.RunAndFindMatches(profile, null);
+          //  NoIdeas.Phone.Lib.MatchedResults[]
            
+           // NoIdeas.Client.cloudWebRef.MatchedResults[]
+            foreach(MatchedResults match in test){
+                Console.WriteLine(match.Name);
+            }
+            Console.WriteLine(service.GetNumberOfActiveUsers());
+
+            //Console.WriteLine(service.Url);
+           // service.Url = "http://noideaswebservice.cloudapp.net/NoIdeasWebService.asmx";
+           // Console.WriteLine(service.Url);
+           // Console.WriteLine(service.LoginCheck("test1", "pass"));
+           // Console.WriteLine(service.GetUserProfile("kot").Interest);
+            
+            
+            
+            
+            Console.ReadLine();
             
            
 

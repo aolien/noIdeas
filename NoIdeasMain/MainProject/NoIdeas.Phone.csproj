@@ -53,6 +53,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Hawaii\LiveLocationWrapper\bin\Debug\LiveLocationWrapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Windows Mobile 5.0 SDK R2\Managed Libraries\Microsoft.WindowsMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Windows Mobile 5.0 SDK R2\Managed Libraries\Microsoft.WindowsMobile.PocketOutlook.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,6 +85,12 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrivacyConsent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +112,9 @@
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrivacyConsent.resx">
       <DependentUpon>PrivacyConsent.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,9 +126,27 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Text.resx">
+      <DependentUpon>Text.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Text.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Text.Designer.cs">
+      <DependentUpon>Text.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\cloudWebRef\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -123,10 +158,16 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://127.0.0.1:81/NoIdeasWebService.asmx">
+    <ProjectReference Include="..\NoIdeas.Phone.Lib\NoIdeas.Phone.Lib.csproj">
+      <Project>{2C773BED-E87A-4B33-BF10-95B2680E767E}</Project>
+      <Name>NoIdeas.Phone.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://noideaswebservice.cloudapp.net/NoIdeasWebService.asmx%3fWSDL">
       <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\cloudWebRef\</RelPath>
-      <UpdateFromURL>http://127.0.0.1:81/NoIdeasWebService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://noideaswebservice.cloudapp.net/NoIdeasWebService.asmx%3fWSDL</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -138,20 +179,17 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web References\cloudWebRef\MatchedResults.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\cloudWebRef\NoIdeasWebService.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\cloudWebRef\NoIdeasWebService.disco" />
+    <None Include="Web References\cloudWebRef\Profile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\cloudWebRef\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NoIdeas.Phone.Lib\NoIdeas.Phone.Lib.csproj">
-      <Project>{2C773BED-E87A-4B33-BF10-95B2680E767E}</Project>
-      <Name>NoIdeas.Phone.Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

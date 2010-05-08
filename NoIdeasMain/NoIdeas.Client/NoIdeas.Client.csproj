@@ -75,10 +75,16 @@
     <None Include="Web References\cloudWebRef\NoIdeasWebService.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://127.0.0.1:81/NoIdeasWebService.asmx">
+    <ProjectReference Include="..\NoIdeas.Phone.Lib\NoIdeas.Phone.Lib.csproj">
+      <Project>{2C773BED-E87A-4B33-BF10-95B2680E767E}</Project>
+      <Name>NoIdeas.Phone.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://127.0.0.1:82/NoIdeasWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\cloudWebRef\</RelPath>
-      <UpdateFromURL>http://127.0.0.1:81/NoIdeasWebService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://127.0.0.1:82/NoIdeasWebService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -88,17 +94,17 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web References\cloudWebRef\MatchedResults.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\cloudWebRef\NoIdeasWebService.disco" />
+    <None Include="Web References\cloudWebRef\Profile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\cloudWebRef\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NoIdeas.Phone.Lib\NoIdeas.Phone.Lib.csproj">
-      <Project>{2C773BED-E87A-4B33-BF10-95B2680E767E}</Project>
-      <Name>NoIdeas.Phone.Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

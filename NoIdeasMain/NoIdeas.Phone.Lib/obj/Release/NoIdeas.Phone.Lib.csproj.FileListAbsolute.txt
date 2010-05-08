@@ -1,0 +1,5 @@
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Release\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\bin\Release\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Release\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Phone.Lib\obj\Release\NoIdeas.Phone.Lib.pdb

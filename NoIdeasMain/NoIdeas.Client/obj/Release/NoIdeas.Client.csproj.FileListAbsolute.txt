@@ -1,0 +1,10 @@
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Client.exe.config
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Client.exe
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Client.XmlSerializers.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Client.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Phone.Lib.dll
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\bin\Release\NoIdeas.Phone.Lib.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Release\NoIdeas.Client.exe
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Release\NoIdeas.Client.pdb
+C:\Users\Adam\gitRepo\noIdeas\NoIdeasMain\NoIdeas.Client\obj\Release\NoIdeas.Client.XmlSerializers.dll

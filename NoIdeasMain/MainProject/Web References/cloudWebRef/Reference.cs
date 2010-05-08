@@ -18,7 +18,7 @@ namespace MainProject.cloudWebRef {
     using System.Web.Services.Protocols;
     using System;
     using System.Xml.Serialization;
-    using System.Data;
+    using NoIdeas.Phone.Lib;
     
     
     /// <remarks/>
@@ -29,7 +29,7 @@ namespace MainProject.cloudWebRef {
         
         /// <remarks/>
         public NoIdeasWebService() {
-            this.Url = "http://127.0.0.1:5100/NoIdeasWebService.asmx";
+            this.Url = "http://noideaswebservice.cloudapp.net/NoIdeasWebService.asmx";
         }
         
         /// <remarks/>
@@ -48,6 +48,88 @@ namespace MainProject.cloudWebRef {
         
         /// <remarks/>
         public bool EndUpdateProfile(System.IAsyncResult asyncResult) {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateDatingProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool UpdateDatingProfile(DatingProfile dprofile) {
+            object[] results = this.Invoke("UpdateDatingProfile", new object[] {
+                        dprofile});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public System.IAsyncResult BeginUpdateDatingProfile(DatingProfile dprofile, System.AsyncCallback callback, object asyncState) {
+            return this.BeginInvoke("UpdateDatingProfile", new object[] {
+                        dprofile}, callback, asyncState);
+        }
+        
+        /// <remarks/>
+        public bool EndUpdateDatingProfile(System.IAsyncResult asyncResult) {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertNewUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool InsertNewUser(Profile profile) {
+            object[] results = this.Invoke("InsertNewUser", new object[] {
+                        profile});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public System.IAsyncResult BeginInsertNewUser(Profile profile, System.AsyncCallback callback, object asyncState) {
+            return this.BeginInvoke("InsertNewUser", new object[] {
+                        profile}, callback, asyncState);
+        }
+        
+        /// <remarks/>
+        public bool EndInsertNewUser(System.IAsyncResult asyncResult) {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetUserProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Profile GetUserProfile(string nickName) {
+            object[] results = this.Invoke("GetUserProfile", new object[] {
+                        nickName});
+            return ((Profile)(results[0]));
+        }
+        
+        /// <remarks/>
+        public System.IAsyncResult BeginGetUserProfile(string nickName, System.AsyncCallback callback, object asyncState) {
+            return this.BeginInvoke("GetUserProfile", new object[] {
+                        nickName}, callback, asyncState);
+        }
+        
+        /// <remarks/>
+        public Profile EndGetUserProfile(System.IAsyncResult asyncResult) {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((Profile)(results[0]));
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/LoginCheck", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool LoginCheck(string nickName, string password) {
+            object[] results = this.Invoke("LoginCheck", new object[] {
+                        nickName,
+                        password});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public System.IAsyncResult BeginLoginCheck(string nickName, string password, System.AsyncCallback callback, object asyncState) {
+            return this.BeginInvoke("LoginCheck", new object[] {
+                        nickName,
+                        password}, callback, asyncState);
+        }
+        
+        /// <remarks/>
+        public bool EndLoginCheck(System.IAsyncResult asyncResult) {
             object[] results = this.EndInvoke(asyncResult);
             return ((bool)(results[0]));
         }
@@ -94,24 +176,26 @@ namespace MainProject.cloudWebRef {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FindMatches", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable FindMatches(double longitude, double latitude) {
+        public MatchedResults[] FindMatches(string username, double longitude, double latitude) {
             object[] results = this.Invoke("FindMatches", new object[] {
+                        username,
                         longitude,
                         latitude});
-            return ((System.Data.DataTable)(results[0]));
+            return ((MatchedResults[])(results[0]));
         }
         
         /// <remarks/>
-        public System.IAsyncResult BeginFindMatches(double longitude, double latitude, System.AsyncCallback callback, object asyncState) {
+        public System.IAsyncResult BeginFindMatches(string username, double longitude, double latitude, System.AsyncCallback callback, object asyncState) {
             return this.BeginInvoke("FindMatches", new object[] {
+                        username,
                         longitude,
                         latitude}, callback, asyncState);
         }
         
         /// <remarks/>
-        public System.Data.DataTable EndFindMatches(System.IAsyncResult asyncResult) {
+        public MatchedResults[] EndFindMatches(System.IAsyncResult asyncResult) {
             object[] results = this.EndInvoke(asyncResult);
-            return ((System.Data.DataTable)(results[0]));
+            return ((MatchedResults[])(results[0]));
         }
         
         /// <remarks/>
@@ -154,424 +238,395 @@ namespace MainProject.cloudWebRef {
     }
     
     /// <remarks/>
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Profile {
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.ComponentModel.DesignerCategoryAttribute("code")]
+    //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    //public partial class Profile {
         
-        private string passwordField;
+    //    private string nickNameField;
         
-        private int phoneField;
+    //    private string passwordField;
         
-        private double longitudeField;
+    //    private string firstNameField;
         
-        private double latitudeField;
+    //    private string lastNameField;
         
-        private double distanceField;
+    //    private string sexField;
         
-        private int interest3Field;
+    //    private string hairField;
         
-        private int interest2Field;
+    //    private string raceField;
         
-        private int interest1Field;
+    //    private string interestField;
         
-        private int hairField;
+    //    private int ageField;
         
-        private int weightField;
+    //    private int onlineField;
         
-        private int height_inField;
+    //    private int heightField;
         
-        private int height_ftField;
+    //    private int weightField;
         
-        private int raceField;
+    //    private int phoneField;
         
-        private int onlineField;
+    //    private double longitudeField;
         
-        private string nameField;
+    //    private double latitudeField;
         
-        private string lastNameField;
+    //    private double distanceField;
         
-        private int ageField;
+    //    /// <remarks/>
+    //    public string NickName {
+    //        get {
+    //            return this.nickNameField;
+    //        }
+    //        set {
+    //            this.nickNameField = value;
+    //        }
+    //    }
         
-        private string nickNameField;
+    //    /// <remarks/>
+    //    public string Password {
+    //        get {
+    //            return this.passwordField;
+    //        }
+    //        set {
+    //            this.passwordField = value;
+    //        }
+    //    }
         
-        private string sexField;
+    //    /// <remarks/>
+    //    public string FirstName {
+    //        get {
+    //            return this.firstNameField;
+    //        }
+    //        set {
+    //            this.firstNameField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public string Password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string LastName {
+    //        get {
+    //            return this.lastNameField;
+    //        }
+    //        set {
+    //            this.lastNameField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                this.phoneField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Sex {
+    //        get {
+    //            return this.sexField;
+    //        }
+    //        set {
+    //            this.sexField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public double Longitude {
-            get {
-                return this.longitudeField;
-            }
-            set {
-                this.longitudeField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Hair {
+    //        get {
+    //            return this.hairField;
+    //        }
+    //        set {
+    //            this.hairField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public double Latitude {
-            get {
-                return this.latitudeField;
-            }
-            set {
-                this.latitudeField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Race {
+    //        get {
+    //            return this.raceField;
+    //        }
+    //        set {
+    //            this.raceField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public double Distance {
-            get {
-                return this.distanceField;
-            }
-            set {
-                this.distanceField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Interest {
+    //        get {
+    //            return this.interestField;
+    //        }
+    //        set {
+    //            this.interestField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Interest3 {
-            get {
-                return this.interest3Field;
-            }
-            set {
-                this.interest3Field = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Age {
+    //        get {
+    //            return this.ageField;
+    //        }
+    //        set {
+    //            this.ageField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Interest2 {
-            get {
-                return this.interest2Field;
-            }
-            set {
-                this.interest2Field = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Online {
+    //        get {
+    //            return this.onlineField;
+    //        }
+    //        set {
+    //            this.onlineField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Interest1 {
-            get {
-                return this.interest1Field;
-            }
-            set {
-                this.interest1Field = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Height {
+    //        get {
+    //            return this.heightField;
+    //        }
+    //        set {
+    //            this.heightField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Hair {
-            get {
-                return this.hairField;
-            }
-            set {
-                this.hairField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Weight {
+    //        get {
+    //            return this.weightField;
+    //        }
+    //        set {
+    //            this.weightField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Weight {
-            get {
-                return this.weightField;
-            }
-            set {
-                this.weightField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Phone {
+    //        get {
+    //            return this.phoneField;
+    //        }
+    //        set {
+    //            this.phoneField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Height_in {
-            get {
-                return this.height_inField;
-            }
-            set {
-                this.height_inField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public double Longitude {
+    //        get {
+    //            return this.longitudeField;
+    //        }
+    //        set {
+    //            this.longitudeField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Height_ft {
-            get {
-                return this.height_ftField;
-            }
-            set {
-                this.height_ftField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public double Latitude {
+    //        get {
+    //            return this.latitudeField;
+    //        }
+    //        set {
+    //            this.latitudeField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Race {
-            get {
-                return this.raceField;
-            }
-            set {
-                this.raceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Online {
-            get {
-                return this.onlineField;
-            }
-            set {
-                this.onlineField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string LastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                this.lastNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Age {
-            get {
-                return this.ageField;
-            }
-            set {
-                this.ageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string NickName {
-            get {
-                return this.nickNameField;
-            }
-            set {
-                this.nickNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Sex {
-            get {
-                return this.sexField;
-            }
-            set {
-                this.sexField = value;
-            }
-        }
-    }
+    //    /// <remarks/>
+    //    public double Distance {
+    //        get {
+    //            return this.distanceField;
+    //        }
+    //        set {
+    //            this.distanceField = value;
+    //        }
+    //    }
+    //}
     
-    /// <remarks/>
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class DatingProfile {
+    ///// <remarks/>
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.ComponentModel.DesignerCategoryAttribute("code")]
+    //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    //public partial class MatchedResults {
         
-        private int interest3Field;
+    //    private int phoneField;
         
-        private int interest2Field;
+    //    private string nameField;
         
-        private int interest1Field;
+    //    private double matchPercentageField;
         
-        private int hairField;
+    //    /// <remarks/>
+    //    public int Phone {
+    //        get {
+    //            return this.phoneField;
+    //        }
+    //        set {
+    //            this.phoneField = value;
+    //        }
+    //    }
         
-        private int max_WeightField;
+    //    /// <remarks/>
+    //    public string Name {
+    //        get {
+    //            return this.nameField;
+    //        }
+    //        set {
+    //            this.nameField = value;
+    //        }
+    //    }
         
-        private int min_WeightField;
+    //    /// <remarks/>
+    //    public double MatchPercentage {
+    //        get {
+    //            return this.matchPercentageField;
+    //        }
+    //        set {
+    //            this.matchPercentageField = value;
+    //        }
+    //    }
+    //}
+    
+    ///// <remarks/>
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.ComponentModel.DesignerCategoryAttribute("code")]
+    //[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    //public partial class DatingProfile {
         
-        private int max_Height_inField;
+    //    private string hairField;
         
-        private int min_Height_inField;
+    //    private int max_WeightField;
         
-        private int max_Height_ftField;
+    //    private int min_WeightField;
         
-        private int min_Height_ftField;
+    //    private string raceField;
         
-        private int raceField;
+    //    private int min_AgeField;
         
-        private int min_AgeField;
+    //    private int max_AgeField;
         
-        private int max_AgeField;
+    //    private string nickNameField;
         
-        private string nickNameField;
+    //    private string sexField;
         
-        private string sexField;
+    //    private int height_MaxField;
         
-        /// <remarks/>
-        public int Interest3 {
-            get {
-                return this.interest3Field;
-            }
-            set {
-                this.interest3Field = value;
-            }
-        }
+    //    private int height_MinField;
         
-        /// <remarks/>
-        public int Interest2 {
-            get {
-                return this.interest2Field;
-            }
-            set {
-                this.interest2Field = value;
-            }
-        }
+    //    private string interestField;
         
-        /// <remarks/>
-        public int Interest1 {
-            get {
-                return this.interest1Field;
-            }
-            set {
-                this.interest1Field = value;
-            }
-        }
+    //    private int rangeField;
         
-        /// <remarks/>
-        public int Hair {
-            get {
-                return this.hairField;
-            }
-            set {
-                this.hairField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Hair {
+    //        get {
+    //            return this.hairField;
+    //        }
+    //        set {
+    //            this.hairField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Max_Weight {
-            get {
-                return this.max_WeightField;
-            }
-            set {
-                this.max_WeightField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Max_Weight {
+    //        get {
+    //            return this.max_WeightField;
+    //        }
+    //        set {
+    //            this.max_WeightField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Min_Weight {
-            get {
-                return this.min_WeightField;
-            }
-            set {
-                this.min_WeightField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Min_Weight {
+    //        get {
+    //            return this.min_WeightField;
+    //        }
+    //        set {
+    //            this.min_WeightField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Max_Height_in {
-            get {
-                return this.max_Height_inField;
-            }
-            set {
-                this.max_Height_inField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Race {
+    //        get {
+    //            return this.raceField;
+    //        }
+    //        set {
+    //            this.raceField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Min_Height_in {
-            get {
-                return this.min_Height_inField;
-            }
-            set {
-                this.min_Height_inField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Min_Age {
+    //        get {
+    //            return this.min_AgeField;
+    //        }
+    //        set {
+    //            this.min_AgeField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Max_Height_ft {
-            get {
-                return this.max_Height_ftField;
-            }
-            set {
-                this.max_Height_ftField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Max_Age {
+    //        get {
+    //            return this.max_AgeField;
+    //        }
+    //        set {
+    //            this.max_AgeField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Min_Height_ft {
-            get {
-                return this.min_Height_ftField;
-            }
-            set {
-                this.min_Height_ftField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string NickName {
+    //        get {
+    //            return this.nickNameField;
+    //        }
+    //        set {
+    //            this.nickNameField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Race {
-            get {
-                return this.raceField;
-            }
-            set {
-                this.raceField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Sex {
+    //        get {
+    //            return this.sexField;
+    //        }
+    //        set {
+    //            this.sexField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Min_Age {
-            get {
-                return this.min_AgeField;
-            }
-            set {
-                this.min_AgeField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Height_Max {
+    //        get {
+    //            return this.height_MaxField;
+    //        }
+    //        set {
+    //            this.height_MaxField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public int Max_Age {
-            get {
-                return this.max_AgeField;
-            }
-            set {
-                this.max_AgeField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public int Height_Min {
+    //        get {
+    //            return this.height_MinField;
+    //        }
+    //        set {
+    //            this.height_MinField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public string NickName {
-            get {
-                return this.nickNameField;
-            }
-            set {
-                this.nickNameField = value;
-            }
-        }
+    //    /// <remarks/>
+    //    public string Interest {
+    //        get {
+    //            return this.interestField;
+    //        }
+    //        set {
+    //            this.interestField = value;
+    //        }
+    //    }
         
-        /// <remarks/>
-        public string Sex {
-            get {
-                return this.sexField;
-            }
-            set {
-                this.sexField = value;
-            }
-        }
-    }
+    //    /// <remarks/>
+    //    public int Range {
+    //        get {
+    //            return this.rangeField;
+    //        }
+    //        set {
+    //            this.rangeField = value;
+    //        }
+    //    }
+    //}
 }
